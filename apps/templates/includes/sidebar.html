@@ -1,0 +1,46 @@
+
+	<!-- [ navigation menu ] start -->
+	<nav class="pcoded-navbar menupos-fixed ">
+		<div class="navbar-wrapper ">
+			<div class="navbar-brand header-logo">
+				<a href="/" class="b-brand">
+					<div class="b-bg">
+						<img src="{{ ASSETS_ROOT }}/images/logo2.png" alt="Italian Trulli">
+					</div>
+					<span class="b-title">EvalGenie</span>
+				</a>
+				<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+			</div>
+			<div class="navbar-content scroll-div " >
+				
+				
+					<ul class="nav pcoded-inner-navbar ">
+                        <li class="nav-item"><a href="/user_profile/" class="nav-link"><span
+						            class="pcoded-micon"><i class="feather icon-user"></i></span><span
+						            class="pcoded-mtext">My Profile</span></a></li>
+						{% if request.user.is_superuser %}
+                        <li class="nav-item"><a href="/user_list/" class="nav-link"><span
+							class="pcoded-micon"><i class="feather icon-users"></i></span><span
+							class="pcoded-mtext">Users List</span></a></li>
+						{% endif %}	
+						
+						<li class="nav-item"><a href="/" class="nav-link"><span
+						            class="pcoded-micon"><i class="feather icon-home"></i></span><span
+						            class="pcoded-mtext">Dashboard</span></a></li>
+
+						<li class="nav-item pcoded-menu-caption">
+						    <label>Support</label>
+						</li>
+						<li data-username="Need Support" class="nav-item">
+							<a href="https://evalgenie.com/contact" class="nav-link" target="_blank">
+								<span class="pcoded-micon"><i class="feather icon-help-circle"></i></span><span class="pcoded-mtext">Need support?</span></a>
+						</li>
+
+					</ul>
+				
+			</div>
+		</div>
+	</nav>
+	<!-- [ navigation menu ] end -->
+
+    
